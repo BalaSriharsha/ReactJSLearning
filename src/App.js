@@ -7,7 +7,6 @@ import Projects from './views/Projects';
 import Contact from './views/Contact';
 import {
   BrowserRouter as Router,
-  Link,
   Switch,
   Route
 } from 'react-router-dom';
@@ -22,7 +21,6 @@ function App() {
             <div style={{marginTop:'75px'}}>
               <h1>This is Content</h1>
             </div>
-            <Product />
           </Route>
           <Route exact path="/passion">
             <Passion/>
@@ -32,6 +30,9 @@ function App() {
           </Route>
           <Route exact path="/contact">
             <Contact/>
+          </Route>
+          <Route exact path="/products/:id">
+            <Product/>
           </Route>
         </Switch>
       </Router>
