@@ -1,0 +1,36 @@
+.side-drawer-class{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: white;
+    width: 70%;
+    max-width: 900px;
+    z-index: 300;
+    transform: translate(-100%);
+    transition: transform 0.3s ease-out;
+}
+
+.side-drawer-class.open{
+    transform: translate(0);
+}
+
+.side-drawer-class ul{
+    list-style: none;
+    padding-left: 40%;
+    margin-top: 30%;
+}
+
+.side-drawer-class ul li{
+    margin-top: 30%;
+    font-size: larger;
+    cursor: pointer;
+}
+
+.side-drawer-class ul li:hover{
+    color: gold;
+}
+
+.side-drawer-class ul li:active{
+    color: orange;
+}
