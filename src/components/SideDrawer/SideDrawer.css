@@ -15,6 +15,11 @@
     transform: translate(0);
 }
 
+.side-drawer-link{
+    text-decoration: none;
+    color: black;
+}
+
 .side-drawer-class ul{
     list-style: none;
     padding-left: 40%;

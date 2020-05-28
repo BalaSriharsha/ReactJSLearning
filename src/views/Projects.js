@@ -2,8 +2,8 @@ import React from 'react';
 
 function Projects(){
     return(
-        <div>
-            This is Projects Page
+        <div style={{marginTop:'75px'}}>
+            <h1>This is Projects Page</h1>
         </div>
     )
 }

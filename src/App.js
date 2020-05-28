@@ -1,8 +1,6 @@
 import React from 'react';
 import './App.css';
-import Toolbar from './components/Toolbar/Toolbar';
-import SideDrawer from './components/SideDrawer/SideDrawer';
-import Backdrop from './components/Backdrop/Backdrop';
+import Header from './components/Header'
 import Product from './components/Product/Product';
 import Passion from './views/Passion';
 import Projects from './views/Projects';
@@ -15,24 +13,28 @@ import {
 } from 'react-router-dom';
 
 function App() {
-
-  const [showMenu,setShowMenu] = React.useState(false)
-
-  let mask;
-
-  if(showMenu){
-    mask = <Backdrop menuCloser={()=>setShowMenu(false)}/>
-  }
-
   return (
     <div>
-      <Toolbar menuShower={()=>setShowMenu(true)} />
-      <div style={{marginTop:'75px'}}>
-        <h1>This is Content</h1>
-        <Product />
-      </div>
-      <SideDrawer show={showMenu} menuCloser={()=>setShowMenu(false)} />
-      {mask}
+      <Router>
+        <Header />
+        <Switch>
+          <Route exact path="/">
+            <div style={{marginTop:'75px'}}>
+              <h1>This is Content</h1>
+            </div>
+            <Product />
+          </Route>
+          <Route exact path="/passion">
+            <Passion/>
+          </Route>
+          <Route exact path="/projects">
+            <Projects/>
+          </Route>
+          <Route exact path="/contact">
+            <Contact/>
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }

@@ -2,8 +2,8 @@ import React from 'react';
 
 function Passion(){
     return(
-        <div>
-            This is Passion Page
+        <div style={{marginTop:'75px'}}>
+            <h1>This is Passion Page</h1>
         </div>
     )
 }
