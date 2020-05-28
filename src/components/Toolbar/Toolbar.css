@@ -20,6 +20,11 @@
     cursor: pointer;
 }
 
+.toolbar-logo-link{
+    text-decoration: none;
+    color: black;
+}
+
 .toolbar-empty-space{
     flex: 1;
 }
@@ -30,6 +35,19 @@
     padding: 0;
     height: 100%;
     display: flex;
+}
+
+.toolbar-element-link{
+    text-decoration: none;
+    color: black;
+}
+
+.toolbar-element-link:hover{
+    color: gold;
+}
+
+.toolbar-element-link:active{
+    color: orange;
 }
 
 .toolbar-elements ul li{

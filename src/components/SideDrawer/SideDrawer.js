@@ -1,5 +1,6 @@
 import React from 'react';
-import './SideDrawer.css'
+import './SideDrawer.css';
+import {Link} from 'react-router-dom';
 
 function SideDrawer(props){
     let sideDrawerClass = "side-drawer-class";
@@ -10,13 +11,13 @@ function SideDrawer(props){
         <div className={sideDrawerClass}>
             <ul>
                 <li onClick={props.menuCloser}>
-                    <p>Passion</p>
+                    <Link to="/passion" className="side-drawer-link">Passion</Link>
                 </li>
                 <li onClick={props.menuCloser}>
-                    <p>Projects</p>
+                    <Link to="/projects" className="side-drawer-link">Projects</Link>
                 </li>
                 <li onClick={props.menuCloser}>
-                    <p>Contact</p>
+                    <Link to="/contact" className="side-drawer-link">Contact</Link>
                 </li>
             </ul>
         </div>
