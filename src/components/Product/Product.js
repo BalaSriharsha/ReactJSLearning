@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import './Product.css';
+import LikeButton from '../LikeButton/LikeButton';
 
 function Product() {
 
@@ -27,6 +28,7 @@ function Product() {
     return(
         <div>
             {content}
+            <LikeButton/>
         </div>
     )
 }
